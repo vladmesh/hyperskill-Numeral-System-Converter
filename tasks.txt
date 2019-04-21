@@ -1,0 +1,7 @@
+Stage #4: Any radix converter
+
+Description
+
+Add support for reading the source number in the given radix and conversion it to another given radix.
+
+As there are 26 Latin letters, the maximum radix is 10+26=36. The minimum radix is 1: the number contains a symbol 1 [number] times.
