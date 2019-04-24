@@ -61,12 +61,23 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int sourceRadix = scanner.nextInt();
-        String sourceNumber = scanner.next();
-        int targetRadix = scanner.nextInt();
-        double numberInDec = toDecimal(sourceNumber, sourceRadix);
-        //System.out.println(numberInDec);
-        System.out.println(toRadix(numberInDec, targetRadix));
+        char a = (char) scanner.nextInt();
+        try {
+            int sourceRadix = scanner.nextInt();
+            String sourceNumber = scanner.next();
+            int targetRadix = scanner.nextInt();
+            if(sourceRadix<1 || sourceRadix>36 || targetRadix<1||targetRadix>36){
+                throw new IllegalArgumentException();
+            }
+            double numberInDec = toDecimal(sourceNumber, sourceRadix);
+
+            System.out.println(toRadix(numberInDec, targetRadix));
+        }
+        catch (Exception e){
+            System.out.println("error");
+        }
+
+
 
 
     }
